@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.ejs": "html",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "vector": "cpp"
     }
 }
