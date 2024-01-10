@@ -3,6 +3,7 @@
         "*.ejs": "html",
         "algorithm": "cpp",
         "vector": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "deque": "cpp"
     }
 }
