@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
 
-//순열
+//중복없이 m개의 수열 -> 순열
 
-int n, m, arr[10];
-bool visited[10];
+int n, m, arr[50];
+bool visited[50];
 
-void recur(int cur) {
-
-	if (cur == m) {
-		for (int i = 0; i < m; i++) {
+void recur(int cur){
+	if(cur == m){
+		for(int i=0; i<m; i++){
 			cout << arr[i] << ' ';
 		}
 		cout << '\n';
@@ -17,19 +16,19 @@ void recur(int cur) {
 		return;
 	}
 
-	for (int i = 1; i <= n; i++) {
-		if (visited[i]) continue;
+	for(int i=1; i<=n; i++){
+		if(visited[i]) continue;
 
 		visited[i] = true;
 		arr[cur] = i;
-		recur(cur + 1);
+		recur(cur+1);
 		visited[i] = false;
 	}
 }
 
-int main() {
+int main(){
 
-	cin >> n >> m; 
+	cin >> n >> m;
 
 	recur(0);
 

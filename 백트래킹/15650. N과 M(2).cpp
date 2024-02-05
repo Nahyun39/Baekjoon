@@ -1,29 +1,29 @@
 #include <iostream>
 using namespace std;
 
-//조합
+//조합 
+int n, m;
+int arr[50];
 
-int n, m, arr[10];
-bool visited[10];
-
-void recur(int cur, int start) { 
-
-	if (cur == m) {
-		for (int i = 0; i < m; i++) {
+void recur(int cur, int start){
+	if(cur == m){
+		for(int i=0; i<m; i++){
 			cout << arr[i] << ' ';
 		}
 		cout << '\n';
+
+		return;
 	}
 
-	for (int i = start; i <= n; i++) {
+	for(int i=start; i<=n; i++){
 		arr[cur] = i;
-		recur(cur + 1, i + 1);
+		recur(cur+1, i+1);
 	}
 }
 
-int main() {
+int main(){
 
-	cin >> n >> m; 
+	cin >> n >> m;
 
 	recur(0, 1);
 

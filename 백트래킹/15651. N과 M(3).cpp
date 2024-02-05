@@ -1,14 +1,11 @@
 #include <iostream>
 using namespace std;
 
-//중복순열
+int n, m, arr[50];
 
-int n, m, arr[10];
-bool visited[10];
-
-void recur(int cur) {
-	if (cur == m) {
-	    for (int i = 0; i < m; i++) {
+void recur(int cur){
+	if(cur == n){
+		for(int i=0; i<n; i++){
 			cout << arr[i] << ' ';
 		}
 		cout << '\n';
@@ -16,15 +13,15 @@ void recur(int cur) {
 		return;
 	}
 
-	for (int i = 1; i <= n; i++) {
+	for(int i=1; i<=m; i++){
 		arr[cur] = i;
-		recur(cur + 1);
+		recur(cur+1);
 	}
 }
 
-int main() {
+int main(){
 
-	cin >> n >> m; 
+	cin >> n >> m;
 
 	recur(0);
 

@@ -7,11 +7,10 @@ int n;
 
 int main(){
 
+    int target, current = 1;
     vector<char> v;
     stack<int> st;
     cin >> n;
-
-    int target, current = 1;
 
     for(int i=0; i<n; i++){
         cin >> target;
@@ -32,10 +31,8 @@ int main(){
         }
     }
 
-    for(char op : v){
-        cout << op << '\n';
+    for(char c : v){
+        cout << c << '\n';
     }
-
     return 0;
 }
-
