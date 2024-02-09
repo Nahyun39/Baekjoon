@@ -4,6 +4,7 @@
         "algorithm": "cpp",
         "vector": "cpp",
         "xiosbase": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "xstring": "cpp"
     }
 }
