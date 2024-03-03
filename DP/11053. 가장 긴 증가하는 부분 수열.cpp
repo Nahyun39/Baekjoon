@@ -18,11 +18,11 @@ int main(){
         dp[i] = 1;
 
         for(int j=0; j<i; j++){
-            if(arr[i] > arr[j]){ //자신의 인덱스 수보다 작다면
-                dp[i] = max(dp[i], dp[j]+1);
+            if(arr[i] > arr[j]){
+                dp[i] = max(dp[i], dp[j] + 1);
             }
         }
-        sum = max(dp[i], sum);
+        sum = max(sum, dp[i]);
     }
     cout << sum;
 
